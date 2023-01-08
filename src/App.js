@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home';
+import Header from './components/Header';
+import SearchCities from './components/CityAQI/SearchCities';
+import GetCurrlocdet from './components/GetCurrlocdet';
+
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container-fluid">
+      <Header />
+      <h1>Know Air Quality Index(AQI)</h1>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/getcurrentaqi' element={<GetCurrlocdet />} />
+        <Route path='/searchcityaqi' element={<SearchCities />} />
+      </Routes>
     </div>
   );
 }
