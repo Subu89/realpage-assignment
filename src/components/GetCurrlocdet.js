@@ -23,29 +23,6 @@ const GetCurrlocdet = () => {
     fetchData();
   }, [lat, long]);
 
-  // const getNearestStation = async () => {
-  //   try {
-  //     await navigator.geolocation.getCurrentPosition((position) => {
-  //       setLat(position.coords.latitude);
-  //       setLong(position.coords.longitude);
-  //     })
-  //     setLoading(true);
-  //     fetch(`${FEED_AQI_BASE_URL}geo:${lat};${long}/?token=${TOKEN}`)
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         console.log(data);
-  //         setLocdata(data);
-  //         setLoading(false);
-  //       })
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getNearestStation();
-  // }, [lat]);
-
   return (
     <div>
       {(typeof locdata.data != 'undefined')

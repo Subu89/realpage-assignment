@@ -72,9 +72,9 @@ const CityAQIDetails = (props) => {
             {error}
             {
                 info.data ?
-                    <Card style={{ width: '18rem' }}>
+                    <Card className="details" style={{ width: '18rem' }}>
                         <Card.Header>Prominent Pollutant is, <b>{names[info.data.dominentpol]}</b></Card.Header>
-                        <ListGroup variant='flush'>
+                        <ListGroup variant='flush' className='my-4'>
                             {
                                 getSpectrum(info.data.iaqi).map((spectrum, i) => (
                                     <ListGroup.Item key={i}>
