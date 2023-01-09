@@ -1,5 +1,3 @@
-aqicn.org token: 55f46b7f5396ace9786d21fe7a24d870fd4899fb
-
 React Code Submission Application Requirements
 
 Build a mobile-responsive web application that will fetch the Air Quality Index (AQI) scores from a free API.
